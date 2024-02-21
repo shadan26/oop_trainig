@@ -54,8 +54,8 @@ void main() {
 
 class Weak {
   List<Day> days = [];
-  static int counter=0; // shared   object
-  Weak(this.days); // composotion
+  static int counter=0;
+  Weak(this.days);
 }
 
 enum Day { saturday, sunday, monday, tuesday, wedensday, thursday, friday }
@@ -63,3 +63,24 @@ enum Day { saturday, sunday, monday, tuesday, wedensday, thursday, friday }
 enum Gender { male, female }
 enum Month{one,two,three,four,five}
 enum Staus{pending,copleted,done,}
+
+// mixin
+mixin Musical {
+  bool canPlayPiano = false;
+  bool canCompose = false;
+  bool canConduct = false;
+
+  void entertainMe() {
+    if (canPlayPiano) {
+      print('Playing piano');
+    } else if (canConduct) {
+      print('Waving hands');
+    } else {
+      print('Humming to self');
+    }
+  }
+}
+class Maestro extends Weak with Musical {
+  Maestro(super.days);
+
+}

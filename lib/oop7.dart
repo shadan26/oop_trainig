@@ -1,24 +1,30 @@
 //Polymorphism
 
-class Car {
-  void power() {
-    print("It runs on petrol.");
+
+class Animal {
+  void makeSound() {
+    print('The animal makes a sound.');
   }
 }
 
-class Honda extends Car {}
-
-class Tesla extends Car {
+class Cat extends Animal {
   @override
-  void power() {
-    print("It runs on electricity.");
+  void makeSound() {
+    print('Meow!');
+  }
+}
+
+class Dog extends Animal {
+  @override
+  void makeSound() {
+    print('Woof!');
   }
 }
 
 void main() {
-  Honda honda = Honda();
-  Tesla tesla = Tesla();
+  Animal cat = Cat();
+  Animal dog = Dog();
 
-  honda.power();
-  tesla.power();
+  cat.makeSound();   // Output: Meow!
+  dog.makeSound();   // Output: Woof!
 }

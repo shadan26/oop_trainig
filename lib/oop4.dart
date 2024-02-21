@@ -1,3 +1,4 @@
+//inheritance
 void main() {
   Employee employee = Employee(
       1000, "Fulltime", "1", "Developer", "Sami", 35, "651651651", 170, 70);
@@ -14,18 +15,15 @@ void main() {
   print(employee.toString());
   // override
 
-  Person person = Person("Sally", 20, "2004564654", 160, 55); // new object  15 Zainab address
-  Person person2 = Person("Sally", 20, "2004564654", 160, 55); // 55   15  Zainab  16
-  print(person.toString()); // instance ob Person
+  Person person = Person("Sally", 20, "2004564654", 160, 55);
+  Person person2 = Person("Sally", 20, "2004564654", 160, 55);
+  print(person.toString()); // instance of Person
   print(person == "anas"); //  false  Peron - String
   print(person == 20); //  false      Person - int
   print(person == true); //  false    Person  - bool
   print(person == person2); // true false
   person.name = "Zainab"; //
   print(person2.name);
-  // Name shadan Age 22      // Name shadan Age 22
-  // person.printData();
-  // employee.printData();
 }
 
 class Person {
@@ -45,7 +43,8 @@ class Person {
   @override
   bool operator ==(Object other) {
     if (other is Person) {
-      return name == other.name &&
+      return
+        name == other.name &&
           age == other.age &&
           ssn == other.ssn &&
           height == other.height &&

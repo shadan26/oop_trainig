@@ -1,11 +1,13 @@
 import 'dart:math' as math;
+//abstract
+//what is thr deffer nt between implementation or extends
 
 abstract class Shape {
   // double area(){
   //   return 10; // impl
   // }
   double area(); // override  abstract method
-  // double mo7e6(); // abstract method
+   // abstract method
   void printHello() {
     // non abstract method
     print("hello");
@@ -18,7 +20,7 @@ class Rectangle extends Shape {
 
   Rectangle({required this.height, required this.width});
 
-  @override //shoud fill the body
+  @override //should fill the body
   double area() {
     return 2 * height + 2 * width;
   }
@@ -63,9 +65,6 @@ void main() {
   circle.printHello(); // Hello Circle
   square.printHello(); // Hello
 
-  printShape(rectangle);
-  printShape(circle);
-  printShape(square);
 }
 
 void printShape(Shape shape) {

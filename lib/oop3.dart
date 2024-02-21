@@ -1,4 +1,4 @@
-
+//composition
 void main() {
   Person person = Person(
       name: null,
@@ -10,7 +10,7 @@ void main() {
           companyName: "Amazon"));
   print(person.toString());
   // 4
-// inheritance
+
 }
 
 //
