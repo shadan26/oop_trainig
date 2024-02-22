@@ -4,19 +4,6 @@
 
 void main() {
 
-
-
-
-
-
-
-
-
-
-
-
-
-
   //final vs const
   final key =1 ; //run time we can put value from database
   const tall =190;// compile time -- about number that const
